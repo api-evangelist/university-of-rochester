@@ -1,0 +1,80 @@
+---
+aid: university-of-rochester
+name: University of Rochester
+description: >-
+  The University of Rochester is a private research university in Rochester, New
+  York, ranked #236 in the QS World University Rankings 2025. It does not operate
+  a single official, centralized public developer portal; its publicly reachable
+  programmatic surface is found across library and research-data infrastructure.
+  The University of Rochester Research Repository (URRR) runs on the Figshare
+  platform, which exposes a public REST API and an OAI-PMH endpoint, and the
+  legacy UR Research institutional repository still serves a live OAI-PMH
+  interface. The River Campus Libraries also maintain an active public GitHub
+  organization with digital-library tooling. Most enterprise systems (SIS,
+  identity/SSO, course/catalog) are gated and not publicly documented.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/university-of-rochester/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - Research
+  - Library
+  - Institutional Repository
+  - Open Data
+  - United States
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: university-of-rochester:figshare-urrr
+    name: University of Rochester Research Repository (URRR) - Figshare API
+    description: >-
+      The University of Rochester Research Repository (URRR) is the
+      institution's official research and data repository, hosted on the
+      Figshare platform at rochester.figshare.com. Figshare provides a public
+      REST API (api.figshare.com/v2) for programmatic access to articles,
+      collections, and metadata. This is a third-party platform API used by the
+      university rather than a university-operated API.
+    humanURL: https://docs.figshare.com/
+    baseURL: https://api.figshare.com/v2
+    tags: [ Research, Institutional Repository, Open Data, Figshare ]
+    properties:
+      - type: Documentation
+        url: https://docs.figshare.com/
+      - type: Portal
+        url: https://rochester.figshare.com/
+  - aid: university-of-rochester:urresearch-oai
+    name: UR Research Institutional Repository OAI-PMH
+    description: >-
+      The legacy UR Research institutional repository exposes a live OAI-PMH
+      interface for harvesting Dublin Core metadata of deposited research
+      outputs (papers, theses, datasets). The endpoint responds to standard
+      OAI-PMH verbs such as Identify, ListRecords, and ListMetadataFormats.
+    humanURL: https://urresearch.rochester.edu/
+    baseURL: https://urresearch.rochester.edu/oai/request
+    tags: [ Library, Institutional Repository, OAI-PMH, Metadata, Harvesting ]
+    properties:
+      - type: Documentation
+        url: https://urresearch.rochester.edu/
+common:
+  - type: Website
+    url: https://www.rochester.edu/
+  - type: GitHub
+    url: https://github.com/rochester-rcl
+  - type: LinkedIn
+    url: https://www.linkedin.com/school/university-of-rochester/
+  - type: Plans
+    url: plans/university-of-rochester-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/university-of-rochester-rate-limits.yml
+  - type: FinOps
+    url: finops/university-of-rochester-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

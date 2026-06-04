@@ -1,0 +1,51 @@
+---
+name: University of Rochester
+description: University of Rochester public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/university-of-rochester/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 2
+    summary: >-
+      No centralized official developer portal was found for the University of
+      Rochester. The verified public programmatic surface is third-party and
+      library/research-data oriented: the URRR institutional repository runs on
+      Figshare (public REST API at api.figshare.com/v2 confirmed live) and the
+      legacy UR Research repository serves a live OAI-PMH interface that returns
+      a valid Identify response. The River Campus Libraries GitHub org
+      (rochester-rcl) is active with digital-library tooling. Enterprise SIS,
+      identity/SSO, and course/catalog endpoints probed did not resolve publicly
+      and appear gated. No endpoints were fabricated; only live-verified URLs are
+      cataloged.
+    endpoints:
+      - url: https://www.rochester.edu/
+        status: 200
+        note: Official university website, resolves.
+      - url: https://api.figshare.com/v2/articles
+        status: 200
+        note: Figshare public REST API (platform behind URRR), returns JSON.
+      - url: https://rochester.figshare.com/
+        status: 202
+        note: URRR repository on Figshare; 202 behind Cloudflare challenge, reachable.
+      - url: https://urresearch.rochester.edu/oai/request?verb=Identify
+        status: 200
+        note: Legacy UR Research OAI-PMH endpoint, returns valid OAI-PMH response.
+      - url: https://github.com/rochester-rcl
+        status: 200
+        note: River Campus Libraries public GitHub org (~112 repos).
+      - url: https://docs.figshare.com/
+        status: 200
+        note: Figshare API documentation.
+      - url: https://dspace.lib.rochester.edu/oai/
+        status: 404
+        note: Older DSpace OAI path does not resolve.
+      - url: https://search.library.rochester.edu/
+        status: 0
+        note: Library discovery host did not resolve from probe.
+      - url: https://shibboleth.rochester.edu/
+        status: 0
+        note: Guessed SSO host; did not resolve, no public identity API confirmed.
+      - url: https://www.linkedin.com/school/university-of-rochester/
+        status: 999
+        note: LinkedIn school page exists; 999 is LinkedIn anti-bot, not a dead link.
