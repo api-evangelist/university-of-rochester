@@ -1,0 +1,215 @@
+{
+  "_note": "Representative response from GET https://api.figshare.com/v2/collections/8516204. Captured 2026-06-03.",
+  "request": {
+    "method": "GET",
+    "url": "https://api.figshare.com/v2/collections/8516204"
+  },
+  "response": {
+    "version": 1,
+    "resource_id": "10.1021/acs.inorgchem.6c00358",
+    "resource_doi": "10.1021/acs.inorgchem.6c00358",
+    "resource_title": "Influence\nof the Conjugated Structure of Redox Ligands\non the PCET Process in Water Oxidation Reactions",
+    "resource_link": "https://doi.org/10.1021/acs.inorgchem.6c00358",
+    "resource_version": 1,
+    "description": "To\nsolve the high overpotential and low catalytic efficiency\nbottlenecks\nin the oxygen evolution reaction (OER), this work focuses on the precise\nregulation of redox-active ligand conjugation on proton-coupled electron\ntransfer (PCET). We propose a strategy to optimize catalyst performance\nby tuning the ligand conjugation scope and degree. Using parent ligand\nL<sub>1</sub> as a scaffold, ligands L<sub>2</sub> and L<sub>3</sub> with extended conjugation were designed and synthesized, yielding\nruthenium(III) hydroxylated complexes [(L<sub>2</sub><sup>N5\u2011</sup>)-Ru<sup>III</sup>\u2013OH]<sup>+</sup> and [(L<sub>3</sub><sup>N5\u2011</sup>)-Ru<sup>III</sup>\u2013OH]<sup>+</sup>, fully\ncharacterized by <sup>1</sup>H NMR, ESI-HRMS, and XRD. Electrochemical\nmeasurements show that extended conjugation significantly lowers oxidation\npotentials. The OER overpotentials decrease to 93 and 100 mV from\n183 mV of the L<sub>1</sub> complex, with catalytic rates reaching\n7.75 and 4.95 s<sup>\u20131</sup>, far higher than 1.26 s<sup>\u20131</sup>. DFT and kinetic studies reveal that oxidation potential differences\nstem from the SOMO energies of Ru<sup>4+</sup> intermediates. Base-assisted\nwater nucleophilic attack is the rate-determining step, with energy\nbarriers reduced to 17.6 and 16.7 kcal/mol for L<sub>2</sub>/L<sub>3</sub> systems, much lower than the 26.4 kcal/mol for L<sub>1</sub>. This study establishes the conjugation-PCET-activity relationship,\noffering a theoretical guide for designing low overpotential, high-performance\nOER catalysts.",
+    "categories": [
+      {
+        "id": 1,
+        "title": "Biophysics",
+        "parent_id": 48,
+        "path": "",
+        "source_id": "",
+        "taxonomy_id": 10
+      },
+      {
+        "id": 4,
+        "title": "Biochemistry",
+        "parent_id": 38,
+        "path": "",
+        "source_id": "",
+        "taxonomy_id": 10
+      },
+      {
+        "id": 19,
+        "title": "Pharmacology",
+        "parent_id": 48,
+        "path": "",
+        "source_id": "",
+        "taxonomy_id": 10
+      },
+      {
+        "id": 873,
+        "title": "Chemical Sciences not elsewhere classified",
+        "parent_id": 38,
+        "path": "",
+        "source_id": "",
+        "taxonomy_id": 10
+      }
+    ],
+    "references": [
+      "https://doi.org/10.1021/acs.inorgchem.6c00358"
+    ],
+    "tags": [
+      "water oxidation reactions",
+      "oxygen evolution reaction",
+      "optimize catalyst performance",
+      "kinetic studies reveal",
+      "energy barriers reduced",
+      "electrochemical measurements show",
+      "coupled electron transfer",
+      "performance oer catalysts",
+      "oer overpotentials decrease",
+      "designing low overpotential",
+      "ligand conjugation scope",
+      "active ligand conjugation",
+      "3 </ sub",
+      "2 </ sub",
+      "1 </ sub",
+      "1 </ sup",
+      "4 +</ sup",
+      "oer ),",
+      "extended conjugation",
+      "yielding ruthenium",
+      "work focuses",
+      "theoretical guide",
+      "study establishes",
+      "somo energies",
+      "precise regulation",
+      "much lower",
+      "high overpotential",
+      "h nmr",
+      "determining step",
+      "conjugated structure",
+      "activity relationship",
+      "7 kcal",
+      "4 kcal",
+      "183 mv",
+      "100 mv"
+    ],
+    "keywords": [
+      "water oxidation reactions",
+      "oxygen evolution reaction",
+      "optimize catalyst performance",
+      "kinetic studies reveal",
+      "energy barriers reduced",
+      "electrochemical measurements show",
+      "coupled electron transfer",
+      "performance oer catalysts",
+      "oer overpotentials decrease",
+      "designing low overpotential",
+      "ligand conjugation scope",
+      "active ligand conjugation",
+      "3 </ sub",
+      "2 </ sub",
+      "1 </ sub",
+      "1 </ sup",
+      "4 +</ sup",
+      "oer ),",
+      "extended conjugation",
+      "yielding ruthenium",
+      "work focuses",
+      "theoretical guide",
+      "study establishes",
+      "somo energies",
+      "precise regulation",
+      "much lower",
+      "high overpotential",
+      "h nmr",
+      "determining step",
+      "conjugated structure",
+      "activity relationship",
+      "7 kcal",
+      "4 kcal",
+      "183 mv",
+      "100 mv"
+    ],
+    "authors": [
+      {
+        "id": 104611,
+        "full_name": "Lulu Zhang",
+        "first_name": "Lulu",
+        "last_name": "Zhang",
+        "is_active": false,
+        "url_name": "Lulu_Zhang",
+        "orcid_id": ""
+      },
+      {
+        "id": 38537,
+        "full_name": "Jing Liu",
+        "first_name": "Jing",
+        "last_name": "Liu",
+        "is_active": false,
+        "url_name": "Jing_Liu",
+        "orcid_id": ""
+      },
+      {
+        "id": 4752987,
+        "full_name": "Luyao Zheng",
+        "first_name": "Luyao",
+        "last_name": "Zheng",
+        "is_active": false,
+        "url_name": "_",
+        "orcid_id": ""
+      },
+      {
+        "id": 1354074,
+        "full_name": "Rong-Zhen Liao",
+        "first_name": "Rong-Zhen",
+        "last_name": "Liao",
+        "is_active": false,
+        "url_name": "_",
+        "orcid_id": ""
+      },
+      {
+        "id": 553876,
+        "full_name": "Ying-Ying Li",
+        "first_name": "Ying-Ying",
+        "last_name": "Li",
+        "is_active": false,
+        "url_name": "_",
+        "orcid_id": ""
+      },
+      {
+        "id": 16730,
+        "full_name": "Jing Shi",
+        "first_name": "Jing",
+        "last_name": "Shi",
+        "is_active": false,
+        "url_name": "Jing_Shi",
+        "orcid_id": ""
+      }
+    ],
+    "funding": [],
+    "institution_id": 63,
+    "group_id": 2517,
+    "group_resource_id": "inocaj",
+    "articles_count": 1,
+    "public": true,
+    "custom_fields": [],
+    "citation": "Zhang, Lulu; Liu, Jing; Zheng, Luyao; Liao, Rong-Zhen; Li, Ying-Ying; Shi, Jing (2026). Influence\nof the Conjugated Structure of Redox Ligands\non the PCET Process in Water Oxidation Reactions. ACS Publications. Collection. https://doi.org/10.1021/acs.inorgchem.6c00358",
+    "created_date": "2026-06-04T03:03:30Z",
+    "modified_date": "2026-06-04T03:03:30Z",
+    "related_materials": [
+      {
+        "id": 279205898,
+        "identifier": "10.1021/acs.inorgchem.6c00358",
+        "title": "Influence\nof the Conjugated Structure of Redox Ligands\non the PCET Process in Water Oxidation Reactions",
+        "relation": "IsSupplementTo",
+        "identifier_type": "DOI",
+        "is_linkout": true,
+        "link": "https://doi.org/10.1021/acs.inorgchem.6c00358"
+      }
+    ],
+    "id": 8516204,
+    "title": "Influence\nof the Conjugated Structure of Redox Ligands\non the PCET Process in Water Oxidation Reactions",
+    "doi": "10.1021/acs.inorgchem.6c00358",
+    "handle": "",
+    "url": "https://api.figshare.com/v2/collections/8516204",
+    "published_date": "2026-06-04T03:03:30Z",
+    "timeline": {
+      "posted": "2026-06-04T03:03:30",
+      "publisherPublication": "2026-06-03T00:00:00",
+      "revision": "2026-06-04T03:03:30"
+    }
+  }
+}

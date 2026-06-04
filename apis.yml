@@ -47,6 +47,24 @@ apis:
         url: https://docs.figshare.com/
       - type: Portal
         url: https://rochester.figshare.com/
+      - type: OpenAPI
+        url: openapi/university-of-rochester-figshare-urrr.yaml
+      - type: x-json-schema
+        url: json-schema/university-of-rochester-article-schema.json
+      - type: x-json-schema
+        url: json-schema/university-of-rochester-collection-schema.json
+      - type: x-json-structure
+        url: json-structure/university-of-rochester-article-structure.json
+      - type: x-json-structure
+        url: json-structure/university-of-rochester-collection-structure.json
+      - type: x-examples
+        url: examples/university-of-rochester-article-get-example.json
+      - type: x-spectral-rules
+        url: rules/university-of-rochester-rules.yml
+      - type: x-vocabulary
+        url: vocabulary/university-of-rochester-vocabulary.yml
+      - type: x-json-ld
+        url: json-ld/university-of-rochester-context.jsonld
   - aid: university-of-rochester:urresearch-oai
     name: UR Research Institutional Repository OAI-PMH
     description: >-

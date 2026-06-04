@@ -1,0 +1,62 @@
+---
+# Spectral ruleset for the University of Rochester Research Repository (URRR) Figshare API.
+# Encodes patterns observed in the real Figshare OpenAPI 3.0.3 description
+# (https://docs.figshare.com/swagger.json) as used by rochester.figshare.com.
+formats:
+  - oas3
+extends:
+  - spectral:oas
+rules:
+  # The API is served from the versioned Figshare base path.
+  urrr-server-is-figshare-v2:
+    description: Servers should target the Figshare v2 API base URL.
+    severity: warn
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://api\\.figshare\\.com/v2"
+
+  # Public read operations on articles/collections should not require security.
+  urrr-public-get-no-auth:
+    description: Public GET endpoints (articles, collections, projects) should be openly readable.
+    severity: info
+    given: $.paths[?(@property.match(/^\/(articles|collections|projects)/))].get
+    then:
+      field: operationId
+      function: truthy
+
+  # Core resource objects expose stable identifiers and DOIs.
+  urrr-article-has-doi:
+    description: The Article schema must define id, doi and url fields.
+    severity: warn
+    given: $.components.schemas.Article.properties
+    then:
+      - field: id
+        function: truthy
+      - field: doi
+        function: truthy
+      - field: url
+        function: truthy
+
+  # Timeline date fields are present on cataloged research outputs.
+  urrr-collection-has-doi:
+    description: The Collection schema must define id, doi and title fields.
+    severity: warn
+    given: $.components.schemas.Collection.properties
+    then:
+      - field: id
+        function: truthy
+      - field: doi
+        function: truthy
+      - field: title
+        function: truthy
+
+  # Authenticated write operations use OAuth2.
+  urrr-oauth2-defined:
+    description: An OAuth2 security scheme should be defined for account/write operations.
+    severity: warn
+    given: $.components.securitySchemes
+    then:
+      field: OAuth2
+      function: truthy

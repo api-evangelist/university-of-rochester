@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-rochester/main/json-structure/university-of-rochester-article-structure.json",
+  "name": "FigshareArticle",
+  "type": "object",
+  "description": "JSON Structure definition for the Figshare Article object exposed via the University of Rochester Research Repository (URRR).",
+  "properties": {
+    "id": {
+      "type": "int64",
+      "description": "Unique identifier for article"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of article"
+    },
+    "doi": {
+      "type": "string",
+      "description": "DOI"
+    },
+    "handle": {
+      "type": "string",
+      "description": "Handle"
+    },
+    "url": {
+      "type": "string",
+      "description": "Api endpoint for article"
+    },
+    "url_public_html": {
+      "type": "string",
+      "description": "Public site endpoint for article"
+    },
+    "url_public_api": {
+      "type": "string",
+      "description": "Public Api endpoint for article"
+    },
+    "url_private_html": {
+      "type": "string",
+      "description": "Private site endpoint for article"
+    },
+    "url_private_api": {
+      "type": "string",
+      "description": "Private Api endpoint for article"
+    },
+    "timeline": {
+      "type": "object",
+      "description": ""
+    },
+    "thumb": {
+      "type": "string",
+      "description": "Thumbnail image"
+    },
+    "defined_type": {
+      "type": "int64",
+      "description": "Type of article identifier"
+    },
+    "defined_type_name": {
+      "type": "string",
+      "description": "Name of the article type identifier"
+    },
+    "resource_doi": {
+      "type": "string",
+      "description": "Deprecated by related materials. Not applicable to regular users. In a publisher case, this is the publisher article DOI."
+    },
+    "resource_title": {
+      "type": "string",
+      "description": "Deprecated by related materials. Not applicable to regular users. In a publisher case, this is the publisher article title."
+    },
+    "created_date": {
+      "type": "string",
+      "description": "Date when article was created"
+    }
+  }
+}

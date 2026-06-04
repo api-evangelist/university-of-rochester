@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-rochester/main/json-schema/university-of-rochester-collection-schema.json",
+  "title": "Figshare Collection",
+  "description": "JSON Schema for the Figshare Collection object as used by the University of Rochester Research Repository (URRR).",
+  "required": [
+    "doi",
+    "handle",
+    "id",
+    "timeline",
+    "title",
+    "url"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Collection id",
+      "example": 123
+    },
+    "title": {
+      "type": "string",
+      "description": "Collection title",
+      "example": "Sample collection"
+    },
+    "doi": {
+      "type": "string",
+      "description": "Collection DOI",
+      "example": "10.6084/m9.figshare.123"
+    },
+    "handle": {
+      "type": "string",
+      "description": "Collection Handle",
+      "example": "111184/figshare.1234"
+    },
+    "url": {
+      "type": "string",
+      "description": "Api endpoint",
+      "example": "https://api.figshare.com/v2/collections/123"
+    },
+    "timeline": {
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "firstOnline": {
+              "type": "string",
+              "description": "Online posted date",
+              "example": "2015-12-31"
+            },
+            "publisherPublication": {
+              "type": "string",
+              "description": "Publish date",
+              "example": "2015-12-31"
+            },
+            "publisherAcceptance": {
+              "type": "string",
+              "description": "Date when the item was accepted for publication",
+              "example": "2015-12-31"
+            }
+          },
+          "x-tag": "timeline_update"
+        }
+      ],
+      "x-tag": "timeline"
+    }
+  },
+  "x-tag": "collections"
+}

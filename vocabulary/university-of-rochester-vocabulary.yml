@@ -1,0 +1,74 @@
+---
+vocabulary:
+  name: University of Rochester Research Repository (URRR) Vocabulary
+  description: >-
+    Controlled vocabulary of the core terms exposed by the University of
+    Rochester Research Repository (URRR), which runs on the Figshare platform
+    and is accessed through the public Figshare v2 REST API
+    (https://api.figshare.com/v2). Terms are derived from the real Figshare
+    OpenAPI 3.0.3 description (https://docs.figshare.com/swagger.json) and the
+    institution's portal at rochester.figshare.com.
+  version: '1.0.0'
+  terms:
+    - term: Article
+      definition: >-
+        A single deposited research output (dataset, paper, figure, report,
+        software, etc.) with a unique id, DOI, and public URL. The primary
+        cataloged object in the repository.
+      tags: [ object, research-output, core ]
+    - term: Collection
+      definition: >-
+        A curated grouping of articles published together under a single DOI,
+        typically representing a project, study, or thematic set.
+      tags: [ object, grouping, core ]
+    - term: Project
+      definition: >-
+        A workspace for organizing and collaborating on articles before or
+        after publication.
+      tags: [ object, collaboration ]
+    - term: DOI
+      definition: >-
+        Digital Object Identifier minted for an article or collection, enabling
+        persistent citation of the research output.
+      tags: [ identifier, citation, persistent ]
+    - term: Handle
+      definition: >-
+        A Handle System persistent identifier optionally assigned to an article
+        or collection alongside its DOI.
+      tags: [ identifier, persistent ]
+    - term: Author
+      definition: >-
+        A contributor credited on an article or collection, optionally linked to
+        a Figshare account and an ORCID identifier.
+      tags: [ object, person, attribution ]
+    - term: Category
+      definition: >-
+        A subject classification term applied to articles and collections for
+        discovery and faceted browsing.
+      tags: [ taxonomy, classification ]
+    - term: Timeline
+      definition: >-
+        The set of lifecycle dates for an item, such as posted, firstOnline,
+        revision, and submission dates.
+      tags: [ metadata, dates, lifecycle ]
+    - term: Embargo
+      definition: >-
+        A time-based or permanent restriction on access to an article or its
+        files until a specified release date.
+      tags: [ access-control, policy ]
+    - term: File
+      definition: >-
+        A binary artifact attached to an article (data, document, media),
+        described by name, size, and download URL.
+      tags: [ object, file, download ]
+    - term: defined_type
+      definition: >-
+        Integer code identifying the kind of article (e.g. dataset, figure,
+        media, paper, software), paired with defined_type_name.
+      tags: [ field, type-code ]
+    - term: OAI-PMH
+      definition: >-
+        Open Archives Initiative Protocol for Metadata Harvesting; the legacy
+        UR Research repository exposes a separate OAI-PMH endpoint for Dublin
+        Core metadata harvesting.
+      tags: [ protocol, harvesting, metadata ]

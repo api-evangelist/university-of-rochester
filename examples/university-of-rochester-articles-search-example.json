@@ -1,0 +1,61 @@
+{
+  "_note": "Representative response from POST https://api.figshare.com/v2/articles/search filtered for University of Rochester (rochester.figshare.com). Captured 2026-06-03.",
+  "request": {
+    "method": "POST",
+    "url": "https://api.figshare.com/v2/articles/search",
+    "body": {
+      "search_for": "University of Rochester",
+      "page_size": 2
+    }
+  },
+  "response": [
+    {
+      "project_id": null,
+      "id": 32509488,
+      "title": "A cross-sectional study of serum vitamin B6 levels in people living with Parkinson's disease",
+      "doi": "10.60593/ur.d.32509488.v1",
+      "handle": "",
+      "url": "https://api.figshare.com/v2/articles/32509488",
+      "published_date": "2026-05-29T16:06:22Z",
+      "thumb": "",
+      "defined_type": 3,
+      "defined_type_name": "dataset",
+      "group_id": 49488,
+      "url_private_api": "https://api.figshare.com/v2/account/articles/32509488",
+      "url_public_api": "https://api.figshare.com/v2/articles/32509488",
+      "url_private_html": "https://figshare.com/account/articles/32509488",
+      "url_public_html": "https://rochester.figshare.com/articles/dataset/A_cross-sectional_study_of_serum_vitamin_B6_levels_in_people_living_with_Parkinson_s_disease/32509488",
+      "timeline": {
+        "posted": "2026-05-29T16:06:22"
+      },
+      "resource_title": "",
+      "resource_doi": "",
+      "created_date": "2026-05-29T16:06:22Z",
+      "modified_date": "2026-05-29T16:06:22Z"
+    },
+    {
+      "project_id": null,
+      "id": 32256726,
+      "title": "Computational Modeling of Liquid Crystals and Related Materials Using Time-Dependent Density Functional Theory",
+      "doi": "10.60593/ur.d.32256726.v1",
+      "handle": "",
+      "url": "https://api.figshare.com/v2/articles/32256726",
+      "published_date": "2026-05-12T18:02:15Z",
+      "thumb": "https://s3-us-east-2.amazonaws.com/figshare-production-eu-rochester-previews6758-us-east-2/64493694/thumb.png",
+      "defined_type": 18,
+      "defined_type_name": "report",
+      "group_id": 59338,
+      "url_private_api": "https://api.figshare.com/v2/account/articles/32256726",
+      "url_public_api": "https://api.figshare.com/v2/articles/32256726",
+      "url_private_html": "https://figshare.com/account/articles/32256726",
+      "url_public_html": "https://rochester.figshare.com/articles/report/Computational_Modeling_of_Liquid_Crystals_and_Related_Materials_Using_Time-Dependent_Density_Functional_Theory/32256726",
+      "timeline": {
+        "posted": "2026-05-12T18:02:15"
+      },
+      "resource_title": "",
+      "resource_doi": "",
+      "created_date": "2026-05-12T18:02:15Z",
+      "modified_date": "2026-05-12T18:02:16Z"
+    }
+  ]
+}

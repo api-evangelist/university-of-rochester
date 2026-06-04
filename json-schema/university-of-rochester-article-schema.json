@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-rochester/main/json-schema/university-of-rochester-article-schema.json",
+  "title": "Figshare Article",
+  "description": "JSON Schema for the Figshare Article object as used by the University of Rochester Research Repository (URRR).",
+  "required": [
+    "created_date",
+    "defined_type",
+    "defined_type_name",
+    "doi",
+    "handle",
+    "id",
+    "resource_doi",
+    "resource_title",
+    "thumb",
+    "timeline",
+    "title",
+    "url",
+    "url_private_api",
+    "url_private_html",
+    "url_public_api",
+    "url_public_html"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique identifier for article",
+      "example": 1434614
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of article",
+      "example": "Test article title"
+    },
+    "doi": {
+      "type": "string",
+      "description": "DOI",
+      "example": "10.6084/m9.figshare.1434614"
+    },
+    "handle": {
+      "type": "string",
+      "description": "Handle",
+      "example": "111184/figshare.1234"
+    },
+    "url": {
+      "type": "string",
+      "description": "Api endpoint for article",
+      "format": "url",
+      "example": "http://api.figshare.com/articles/1434614"
+    },
+    "url_public_html": {
+      "type": "string",
+      "description": "Public site endpoint for article",
+      "format": "url",
+      "example": "https://figshare.com/articles/media/Test_article_title/1434614"
+    },
+    "url_public_api": {
+      "type": "string",
+      "description": "Public Api endpoint for article",
+      "format": "url",
+      "example": "https://api.figshare.com/articles/1434614"
+    },
+    "url_private_html": {
+      "type": "string",
+      "description": "Private site endpoint for article",
+      "format": "url",
+      "example": "https://figshare.com/account/articles/1434614"
+    },
+    "url_private_api": {
+      "type": "string",
+      "description": "Private Api endpoint for article",
+      "format": "url",
+      "example": "https://api.figshare.com/account/articles/1434614"
+    },
+    "timeline": {
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "firstOnline": {
+              "type": "string",
+              "description": "Online posted date",
+              "example": "2015-12-31"
+            },
+            "publisherPublication": {
+              "type": "string",
+              "description": "Publish date",
+              "example": "2015-12-31"
+            },
+            "publisherAcceptance": {
+              "type": "string",
+              "description": "Date when the item was accepted for publication",
+              "example": "2015-12-31"
+            }
+          },
+          "x-tag": "timeline_update"
+        }
+      ],
+      "x-tag": "timeline"
+    },
+    "thumb": {
+      "type": "string",
+      "description": "Thumbnail image",
+      "format": "url",
+      "example": "https://ndownloader.figshare.com/files/123456789/preview/12345678/thumb.png"
+    },
+    "defined_type": {
+      "type": "integer",
+      "description": "Type of article identifier",
+      "example": 3
+    },
+    "defined_type_name": {
+      "type": "string",
+      "description": "Name of the article type identifier",
+      "example": "media"
+    },
+    "resource_doi": {
+      "type": "string",
+      "description": "Deprecated by related materials. Not applicable to regular users. In a publisher case, this is the publisher article DOI.",
+      "default": ""
+    },
+    "resource_title": {
+      "type": "string",
+      "description": "Deprecated by related materials. Not applicable to regular users. In a publisher case, this is the publisher article title.",
+      "default": ""
+    },
+    "created_date": {
+      "type": "string",
+      "description": "Date when article was created",
+      "example": "2017-05-18T11:49:03Z"
+    }
+  },
+  "x-tag": "articles"
+}

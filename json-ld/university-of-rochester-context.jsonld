@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "ur": "https://api-evangelist.github.io/university-of-rochester/vocab#",
+    "figshare": "https://docs.figshare.com/#vocab/",
+
+    "University": "schema:CollegeOrUniversity",
+    "name": "schema:name",
+    "url": "schema:url",
+    "description": "schema:description",
+
+    "Article": "schema:Dataset",
+    "Collection": "schema:Collection",
+    "Project": "schema:Project",
+    "Author": "schema:Person",
+    "Category": "schema:DefinedTerm",
+    "File": "schema:MediaObject",
+
+    "id": "schema:identifier",
+    "doi": {
+      "@id": "schema:identifier",
+      "@type": "@id"
+    },
+    "handle": "schema:identifier",
+    "title": "schema:name",
+    "figshare_url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "url_public_html": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "thumb": {
+      "@id": "schema:thumbnailUrl",
+      "@type": "@id"
+    },
+    "defined_type_name": "schema:additionalType",
+    "created_date": {
+      "@id": "schema:dateCreated",
+      "@type": "schema:DateTime"
+    },
+    "modified_date": {
+      "@id": "schema:dateModified",
+      "@type": "schema:DateTime"
+    },
+    "published_date": {
+      "@id": "schema:datePublished",
+      "@type": "schema:DateTime"
+    },
+    "authors": {
+      "@id": "schema:author",
+      "@container": "@set"
+    },
+    "categories": {
+      "@id": "schema:about",
+      "@container": "@set"
+    },
+    "files": {
+      "@id": "schema:distribution",
+      "@container": "@set"
+    },
+    "orcid_id": "schema:identifier"
+  },
+  "@type": "University",
+  "name": "University of Rochester",
+  "url": "https://www.rochester.edu/",
+  "description": "Private research university in Rochester, New York. Its research outputs are cataloged in the University of Rochester Research Repository (URRR) at rochester.figshare.com, accessible via the public Figshare v2 REST API."
+}

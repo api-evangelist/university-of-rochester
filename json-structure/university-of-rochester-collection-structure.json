@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-rochester/main/json-structure/university-of-rochester-collection-structure.json",
+  "name": "FigshareCollection",
+  "type": "object",
+  "description": "JSON Structure definition for the Figshare Collection object exposed via the University of Rochester Research Repository (URRR).",
+  "properties": {
+    "id": {
+      "type": "int64",
+      "description": "Collection id"
+    },
+    "title": {
+      "type": "string",
+      "description": "Collection title"
+    },
+    "doi": {
+      "type": "string",
+      "description": "Collection DOI"
+    },
+    "handle": {
+      "type": "string",
+      "description": "Collection Handle"
+    },
+    "url": {
+      "type": "string",
+      "description": "Api endpoint"
+    },
+    "timeline": {
+      "type": "object",
+      "description": ""
+    }
+  }
+}

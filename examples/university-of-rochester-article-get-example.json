@@ -1,0 +1,117 @@
+{
+  "_note": "Representative response from GET https://api.figshare.com/v2/articles/32509488 (a University of Rochester Research Repository article hosted on rochester.figshare.com). Captured 2026-06-03.",
+  "request": {
+    "method": "GET",
+    "url": "https://api.figshare.com/v2/articles/32509488"
+  },
+  "response": {
+    "files": [
+      {
+        "id": 65093928,
+        "name": "Data dictionary and database.csv",
+        "size": 36566,
+        "is_link_only": false,
+        "download_url": "https://ndownloader.figshare.com/files/65093928",
+        "supplied_md5": "11f93bae8829b029fcfa261c4a0891ee",
+        "computed_md5": "11f93bae8829b029fcfa261c4a0891ee",
+        "mimetype": "text/csv"
+      }
+    ],
+    "folder_structure": {},
+    "authors": [
+      {
+        "id": 23260532,
+        "full_name": "Karlo Lizarraga",
+        "first_name": "Karlo",
+        "last_name": "Lizarraga",
+        "is_active": true,
+        "url_name": "Karlo_Lizarraga",
+        "orcid_id": ""
+      }
+    ],
+    "custom_fields": [],
+    "figshare_url": "https://rochester.figshare.com/articles/dataset/A_cross-sectional_study_of_serum_vitamin_B6_levels_in_people_living_with_Parkinson_s_disease/32509488",
+    "download_disabled": false,
+    "description": "<p dir=\"ltr\">This file contains the data collected for the study, including deidentified, individual participant and control data, and a data dictionary defining each field in the set.</p><p dir=\"ltr\">The study protocol and statistical analysis plan are available at the University of Rochester Research Repository (<a href=\"\" target=\"_blank\">https://doi.org/10.60593/ur.d.31424636</a>).</p><p dir=\"ltr\">The study was approved by the Research Subjects Review Board of the University of Rochester (STUDY00009245), and it is registered on ClinicalTrials.gov (<a href=\"https://clinicaltrials.gov/study/NCT07430722\" target=\"_blank\">https://clinicaltrials.gov/study/NCT07430722</a>).</p>",
+    "funding": "Anonymous estate gift to the University of Rochester for research in Parkinson's disease.",
+    "funding_list": [
+      {
+        "id": 30088094,
+        "title": "Anonymous estate gift to the University of Rochester for research in Parkinson's disease.",
+        "grant_code": "",
+        "funder_name": null,
+        "is_user_defined": 1
+      }
+    ],
+    "version": 1,
+    "status": "public",
+    "size": 36566,
+    "created_date": "2026-05-29T16:06:22Z",
+    "modified_date": "2026-05-29T16:06:22Z",
+    "is_public": true,
+    "is_confidential": false,
+    "is_metadata_record": false,
+    "confidential_reason": "",
+    "metadata_reason": "",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    "tags": [
+      "Parkinson's disease",
+      "Vitamin B6"
+    ],
+    "keywords": [
+      "Parkinson's disease",
+      "Vitamin B6"
+    ],
+    "categories": [
+      {
+        "id": 31208,
+        "title": "Biomedical and clinical sciences",
+        "parent_id": 0,
+        "path": "/31208",
+        "source_id": "32",
+        "taxonomy_id": 102
+      },
+      {
+        "id": 33752,
+        "title": "Health sciences",
+        "parent_id": 0,
+        "path": "/33752",
+        "source_id": "42",
+        "taxonomy_id": 102
+      }
+    ],
+    "references": [],
+    "has_linked_file": false,
+    "citation": "Lizarraga, Karlo (2026). A cross-sectional study of serum vitamin B6 levels in people living with Parkinson's disease. University of Rochester. Dataset. https://doi.org/10.60593/ur.d.32509488.v1",
+    "related_materials": [],
+    "is_embargoed": false,
+    "embargo_date": null,
+    "embargo_type": null,
+    "embargo_title": "",
+    "embargo_reason": "",
+    "embargo_options": [],
+    "id": 32509488,
+    "title": "A cross-sectional study of serum vitamin B6 levels in people living with Parkinson's disease",
+    "doi": "10.60593/ur.d.32509488.v1",
+    "handle": "",
+    "url": "https://api.figshare.com/v2/articles/32509488",
+    "published_date": "2026-05-29T16:06:22Z",
+    "thumb": "",
+    "defined_type": 3,
+    "defined_type_name": "dataset",
+    "group_id": 49488,
+    "url_private_api": "https://api.figshare.com/v2/account/articles/32509488",
+    "url_public_api": "https://api.figshare.com/v2/articles/32509488",
+    "url_private_html": "https://figshare.com/account/articles/32509488",
+    "url_public_html": "https://rochester.figshare.com/articles/dataset/A_cross-sectional_study_of_serum_vitamin_B6_levels_in_people_living_with_Parkinson_s_disease/32509488",
+    "timeline": {
+      "posted": "2026-05-29T16:06:22"
+    },
+    "resource_title": null,
+    "resource_doi": null
+  }
+}
