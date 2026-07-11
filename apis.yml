@@ -79,6 +79,8 @@ apis:
       - type: Documentation
         url: https://urresearch.rochester.edu/
 common:
+  - type: DomainSecurity
+    url: security/university-of-rochester-domain-security.yml
   - type: Authentication
     url: authentication/university-of-rochester-authentication.yml
   - type: OAuthScopes
