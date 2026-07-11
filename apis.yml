@@ -79,6 +79,10 @@ apis:
       - type: Documentation
         url: https://urresearch.rochester.edu/
 common:
+  - type: Authentication
+    url: authentication/university-of-rochester-authentication.yml
+  - type: OAuthScopes
+    url: scopes/university-of-rochester-scopes.yml
   - type: Website
     url: https://www.rochester.edu/
   - type: GitHub
@@ -93,6 +97,8 @@ common:
     url: finops/university-of-rochester-finops.yml
   - type: Review
     url: review.yml
+  - url: https://www.rochester.edu/newscenter/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
