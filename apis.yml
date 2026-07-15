@@ -79,6 +79,8 @@ apis:
       - type: Documentation
         url: https://urresearch.rochester.edu/
 common:
+  - type: AgenticAccess
+    url: agentic-access/university-of-rochester-agentic-access.yml
   - type: DomainSecurity
     url: security/university-of-rochester-domain-security.yml
   - type: Authentication
