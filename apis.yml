@@ -13,9 +13,22 @@ description: >-
   organization with digital-library tooling. Most enterprise systems (SIS,
   identity/SSO, course/catalog) are gated and not publicly documented.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-rochester.png
 url: https://raw.githubusercontent.com/api-evangelist/university-of-rochester/refs/heads/main/apis.yml
 tags:
   - Education
@@ -30,54 +43,323 @@ created: '2026-06-03'
 modified: '2026-06-03'
 specificationVersion: '0.19'
 apis:
-  - aid: university-of-rochester:figshare-urrr
-    name: University of Rochester Research Repository (URRR) - Figshare API
-    description: >-
-      The University of Rochester Research Repository (URRR) is the
-      institution's official research and data repository, hosted on the
-      Figshare platform at rochester.figshare.com. Figshare provides a public
-      REST API (api.figshare.com/v2) for programmatic access to articles,
-      collections, and metadata. This is a third-party platform API used by the
-      university rather than a university-operated API.
-    humanURL: https://docs.figshare.com/
-    baseURL: https://api.figshare.com/v2
-    tags: [ Research, Institutional Repository, Open Data, Figshare ]
-    properties:
-      - type: Documentation
-        url: https://docs.figshare.com/
-      - type: Portal
-        url: https://rochester.figshare.com/
-      - type: OpenAPI
-        url: openapi/university-of-rochester-figshare-urrr.yaml
-      - type: x-json-schema
-        url: json-schema/university-of-rochester-article-schema.json
-      - type: x-json-schema
-        url: json-schema/university-of-rochester-collection-schema.json
-      - type: x-json-structure
-        url: json-structure/university-of-rochester-article-structure.json
-      - type: x-json-structure
-        url: json-structure/university-of-rochester-collection-structure.json
-      - type: x-examples
-        url: examples/university-of-rochester-article-get-example.json
-      - type: x-spectral-rules
-        url: rules/university-of-rochester-rules.yml
-      - type: x-vocabulary
-        url: vocabulary/university-of-rochester-vocabulary.yml
-      - type: x-json-ld
-        url: json-ld/university-of-rochester-context.jsonld
-  - aid: university-of-rochester:urresearch-oai
-    name: UR Research Institutional Repository OAI-PMH
-    description: >-
-      The legacy UR Research institutional repository exposes a live OAI-PMH
-      interface for harvesting Dublin Core metadata of deposited research
-      outputs (papers, theses, datasets). The endpoint responds to standard
-      OAI-PMH verbs such as Identify, ListRecords, and ListMetadataFormats.
-    humanURL: https://urresearch.rochester.edu/
-    baseURL: https://urresearch.rochester.edu/oai/request
-    tags: [ Library, Institutional Repository, OAI-PMH, Metadata, Harvesting ]
-    properties:
-      - type: Documentation
-        url: https://urresearch.rochester.edu/
+- aid: university-of-rochester:urresearch-oai
+  name: UR Research Institutional Repository OAI-PMH
+  description: >-
+    The legacy UR Research institutional repository exposes a live OAI-PMH interface for harvesting Dublin
+    Core metadata of deposited research outputs (papers, theses, datasets). The endpoint responds to standard
+    OAI-PMH verbs such as Identify, ListRecords, and ListMetadataFormats.
+  humanURL: https://urresearch.rochester.edu/
+  baseURL: https://urresearch.rochester.edu/oai/request
+  tags:
+  - Library
+  - Institutional Repository
+  - OAI-PMH
+  - Metadata
+  - Harvesting
+  properties:
+  - type: Documentation
+    url: https://urresearch.rochester.edu/
+- aid: university-of-rochester:university-of-rochester-altmetric-api
+  name: University of Rochester altmetric API
+  description: The altmetric API from University of Rochester — 1 operation(s) for altmetric.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - altmetric
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-altmetric-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-articles-api
+  name: University of Rochester articles API
+  description: The articles API from University of Rochester — 34 operation(s) for articles.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - articles
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-articles-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-authors-api
+  name: University of Rochester authors API
+  description: The authors API from University of Rochester — 2 operation(s) for authors.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - authors
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-authors-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-collections-api
+  name: University of Rochester collections API
+  description: The collections API from University of Rochester — 21 operation(s) for collections.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - collections
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-collections-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-institutions-api
+  name: University of Rochester institutions API
+  description: The institutions API from University of Rochester — 20 operation(s) for institutions.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - institutions
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-institutions-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-oauth-api
+  name: University of Rochester oauth API
+  description: The oauth API from University of Rochester — 1 operation(s) for oauth.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - oauth
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-oauth-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-other-api
+  name: University of Rochester other API
+  description: The other API from University of Rochester — 7 operation(s) for other.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - other
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-other-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-profiles-api
+  name: University of Rochester profiles API
+  description: The profiles API from University of Rochester — 2 operation(s) for profiles.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - profiles
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-profiles-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-projects-api
+  name: University of Rochester projects API
+  description: The projects API from University of Rochester — 17 operation(s) for projects.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - projects
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-projects-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
+- aid: university-of-rochester:university-of-rochester-symplectic-api
+  name: University of Rochester symplectic API
+  description: The symplectic API from University of Rochester — 5 operation(s) for symplectic.
+  humanURL: https://docs.figshare.com/
+  baseURL: https://api.figshare.com/v2
+  tags:
+  - symplectic
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-symplectic-api-openapi.yml
+  - type: Documentation
+    url: https://docs.figshare.com/
+  - type: Portal
+    url: https://rochester.figshare.com/
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-article-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-rochester-collection-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-article-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-rochester-collection-structure.json
+  - type: x-examples
+    url: examples/university-of-rochester-article-get-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-rochester-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-rochester-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-rochester-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/university-of-rochester-agentic-access.yml
