@@ -1,0 +1,32 @@
+{
+  "provider": "university-of-rochester",
+  "sources": [
+    "university-of-rochester-altmetric-api-openapi.yml",
+    "university-of-rochester-articles-api-openapi.yml",
+    "university-of-rochester-authors-api-openapi.yml",
+    "university-of-rochester-collections-api-openapi.yml",
+    "university-of-rochester-institutions-api-openapi.yml",
+    "university-of-rochester-oauth-api-openapi.yml",
+    "university-of-rochester-other-api-openapi.yml",
+    "university-of-rochester-profiles-api-openapi.yml",
+    "university-of-rochester-projects-api-openapi.yml",
+    "university-of-rochester-symplectic-api-openapi.yml"
+  ],
+  "outputs": [
+    "university-of-rochester-altmetric-api-openapi.yml",
+    "university-of-rochester-articles-api-openapi.yml",
+    "university-of-rochester-authors-api-openapi.yml",
+    "university-of-rochester-collections-api-openapi.yml",
+    "university-of-rochester-institutions-api-openapi.yml",
+    "university-of-rochester-oauth-api-openapi.yml",
+    "university-of-rochester-other-api-openapi.yml",
+    "university-of-rochester-profiles-api-openapi.yml",
+    "university-of-rochester-projects-api-openapi.yml",
+    "university-of-rochester-symplectic-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
