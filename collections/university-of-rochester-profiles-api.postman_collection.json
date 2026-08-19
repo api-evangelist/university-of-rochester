@@ -1,0 +1,810 @@
+{
+  "item": [
+    {
+      "id": "8761a2df-74e2-4bb1-a660-cb2481adb699",
+      "name": "profiles",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e9df9b7c-4453-4690-9368-1ea6ee2e9f42",
+          "name": "Update public profile",
+          "request": {
+            "name": "Update public profile",
+            "description": {
+              "content": "Updates the fields of the user's public profile.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "account",
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_id",
+                  "value": "<integer>",
+                  "description": "User ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "institution_user_id",
+                  "value": "<string>",
+                  "description": "Institutional user ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "all"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.figshare.com/v2/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://figshare.com/account/applications/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"orcid\": \"<string>\",\n  \"job_title\": \"<string>\",\n  \"fields_of_interest\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"fields_of_interest_by_source_id\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"location\": \"<string>\",\n  \"facebook\": \"<url>\",\n  \"x\": \"<url>\",\n  \"linkedin\": \"<url>\",\n  \"bio\": \"<string>\",\n  \"personal_profiles\": [\n    {\n      \"label\": \"<string>\",\n      \"url\": \"<url>\"\n    },\n    {\n      \"label\": \"<string>\",\n      \"url\": \"<url>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cd2e627e-8107-4301-8184-f8d797535720",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "institution_user_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"orcid\": \"0000-0001-YYYY-XXXX\",\n  \"job_title\": \"Researcher at institution X\",\n  \"fields_of_interest\": [\n    1,\n    2\n  ],\n  \"fields_of_interest_by_source_id\": [\n    \"3204\",\n    \"320401\"\n  ],\n  \"location\": \"London, UK\",\n  \"facebook\": \"https://facebook.com/profile/1\",\n  \"x\": \"https://x.com/profile/1\",\n  \"linkedin\": \"https://linkedin.com/profile/2\",\n  \"bio\": \"Biographical information\",\n  \"personal_profiles\": [\n    {\n      \"label\": \"ResearchGate\",\n      \"url\": \"https://researchgate.net/profile/1\"\n    },\n    {\n      \"label\": \"\",\n      \"url\": \"https://academia.edu/profile/1\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"message\": \"OK\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "92a79aab-a8c5-4a0b-9fe8-1861daecd15d",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "institution_user_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"orcid\": \"0000-0001-YYYY-XXXX\",\n  \"job_title\": \"Researcher at institution X\",\n  \"fields_of_interest\": [\n    1,\n    2\n  ],\n  \"fields_of_interest_by_source_id\": [\n    \"3204\",\n    \"320401\"\n  ],\n  \"location\": \"London, UK\",\n  \"facebook\": \"https://facebook.com/profile/1\",\n  \"x\": \"https://x.com/profile/1\",\n  \"linkedin\": \"https://linkedin.com/profile/2\",\n  \"bio\": \"Biographical information\",\n  \"personal_profiles\": [\n    {\n      \"label\": \"ResearchGate\",\n      \"url\": \"https://researchgate.net/profile/1\"\n    },\n    {\n      \"label\": \"\",\n      \"url\": \"https://academia.edu/profile/1\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "57e44752-c8f7-4e23-82f1-ddecc20cbc8d",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "institution_user_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"orcid\": \"0000-0001-YYYY-XXXX\",\n  \"job_title\": \"Researcher at institution X\",\n  \"fields_of_interest\": [\n    1,\n    2\n  ],\n  \"fields_of_interest_by_source_id\": [\n    \"3204\",\n    \"320401\"\n  ],\n  \"location\": \"London, UK\",\n  \"facebook\": \"https://facebook.com/profile/1\",\n  \"x\": \"https://x.com/profile/1\",\n  \"linkedin\": \"https://linkedin.com/profile/2\",\n  \"bio\": \"Biographical information\",\n  \"personal_profiles\": [\n    {\n      \"label\": \"ResearchGate\",\n      \"url\": \"https://researchgate.net/profile/1\"\n    },\n    {\n      \"label\": \"\",\n      \"url\": \"https://academia.edu/profile/1\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 8013,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "566ee62d-b396-470f-82b8-24dc61882f97",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "institution_user_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"orcid\": \"0000-0001-YYYY-XXXX\",\n  \"job_title\": \"Researcher at institution X\",\n  \"fields_of_interest\": [\n    1,\n    2\n  ],\n  \"fields_of_interest_by_source_id\": [\n    \"3204\",\n    \"320401\"\n  ],\n  \"location\": \"London, UK\",\n  \"facebook\": \"https://facebook.com/profile/1\",\n  \"x\": \"https://x.com/profile/1\",\n  \"linkedin\": \"https://linkedin.com/profile/2\",\n  \"bio\": \"Biographical information\",\n  \"personal_profiles\": [\n    {\n      \"label\": \"ResearchGate\",\n      \"url\": \"https://researchgate.net/profile/1\"\n    },\n    {\n      \"label\": \"\",\n      \"url\": \"https://academia.edu/profile/1\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "379be1af-8527-418e-9eea-63c2845d771f",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "institution_user_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"orcid\": \"0000-0001-YYYY-XXXX\",\n  \"job_title\": \"Researcher at institution X\",\n  \"fields_of_interest\": [\n    1,\n    2\n  ],\n  \"fields_of_interest_by_source_id\": [\n    \"3204\",\n    \"320401\"\n  ],\n  \"location\": \"London, UK\",\n  \"facebook\": \"https://facebook.com/profile/1\",\n  \"x\": \"https://x.com/profile/1\",\n  \"linkedin\": \"https://linkedin.com/profile/2\",\n  \"bio\": \"Biographical information\",\n  \"personal_profiles\": [\n    {\n      \"label\": \"ResearchGate\",\n      \"url\": \"https://researchgate.net/profile/1\"\n    },\n    {\n      \"label\": \"\",\n      \"url\": \"https://academia.edu/profile/1\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e0aac73b-2890-4081-bfcd-4c7764b214bb",
+          "name": "Update public profile picture",
+          "request": {
+            "name": "Update public profile picture",
+            "description": {
+              "content": "Updates the profile picture of the user's public profile.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "account",
+                "profile",
+                ":user_id",
+                "picture"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "user_id",
+                  "description": "(Required) User ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "all"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.figshare.com/v2/token"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://figshare.com/account/applications/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "authorization_code"
+                }
+              ]
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "profile_picture",
+                  "type": "file",
+                  "description": "(Required) User profile picture"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b2512f20-d786-4876-a010-108290d42157",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile",
+                    ":user_id",
+                    "picture"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "user_id",
+                      "description": "(Required) User ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) User profile picture",
+                        "type": "text/plain"
+                      },
+                      "key": "profile_picture",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 200,\n  \"message\": \"OK\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6454b366-f989-44f8-87ec-20031b87a9c4",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile",
+                    ":user_id",
+                    "picture"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "user_id",
+                      "description": "(Required) User ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) User profile picture",
+                        "type": "text/plain"
+                      },
+                      "key": "profile_picture",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "dfc7cecb-8628-4611-bb51-b2aafa16a1c0",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile",
+                    ":user_id",
+                    "picture"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "user_id",
+                      "description": "(Required) User ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) User profile picture",
+                        "type": "text/plain"
+                      },
+                      "key": "profile_picture",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 8013,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4f4f05b4-4d09-4538-ae07-ddd29c960ca9",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile",
+                    ":user_id",
+                    "picture"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "user_id",
+                      "description": "(Required) User ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) User profile picture",
+                        "type": "text/plain"
+                      },
+                      "key": "profile_picture",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c111f821-f45a-4c94-a115-916abd2da46c",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "profile",
+                    ":user_id",
+                    "picture"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "user_id",
+                      "description": "(Required) User ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) User profile picture",
+                        "type": "text/plain"
+                      },
+                      "key": "profile_picture",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.figshare.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ed2aa0c2-0d36-4883-9fe3-8fa74193c6f1",
+    "name": "Figshare altmetric profiles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Figshare API v2 - Full REST API documentation for managing articles, collections, projects and more.\n\nContact Support:\n Name: Figshare Support",
+      "type": "text/plain"
+    }
+  }
+}
