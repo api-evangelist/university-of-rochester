@@ -41,7 +41,7 @@ tags:
   - United States
 created: '2026-06-03'
 modified: '2026-06-03'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: university-of-rochester:urresearch-oai
   name: UR Research Institutional Repository OAI-PMH
