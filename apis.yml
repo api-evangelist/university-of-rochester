@@ -96,6 +96,8 @@ apis:
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
   tags:
+  - Articles
+  tags_raw:
   - articles
   properties:
   - type: OpenAPI
@@ -126,6 +128,8 @@ apis:
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
   tags:
+  - Authors
+  tags_raw:
   - authors
   properties:
   - type: OpenAPI
@@ -156,6 +160,8 @@ apis:
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
   tags:
+  - Collection
+  tags_raw:
   - collections
   properties:
   - type: OpenAPI
@@ -216,6 +222,8 @@ apis:
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
   tags:
+  - Authentication
+  tags_raw:
   - oauth
   properties:
   - type: OpenAPI
@@ -245,7 +253,8 @@ apis:
   description: The other API from University of Rochester — 7 operation(s) for other.
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
-  tags:
+  tags: []
+  tags_raw:
   - other
   properties:
   - type: OpenAPI
@@ -276,6 +285,8 @@ apis:
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
   tags:
+  - Profiles
+  tags_raw:
   - profiles
   properties:
   - type: OpenAPI
@@ -306,6 +317,8 @@ apis:
   humanURL: https://docs.figshare.com/
   baseURL: https://api.figshare.com/v2
   tags:
+  - Project
+  tags_raw:
   - projects
   properties:
   - type: OpenAPI
