@@ -386,6 +386,9 @@ apis:
   - type: x-json-ld
     url: json-ld/university-of-rochester-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/university-of-rochester-capability-edges.yml
+    name: University of Rochester Business Capability Map
   - type: AgenticAccess
     url: agentic-access/university-of-rochester-agentic-access.yml
   - type: DomainSecurity
