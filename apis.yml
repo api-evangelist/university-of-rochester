@@ -48,7 +48,7 @@ accessModel:
   - probed
   generated: '2026-08-30'
   method: probed
-position: Consumer
+position: Consuming
 access: Public
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-rochester.png
 url: https://raw.githubusercontent.com/api-evangelist/university-of-rochester/refs/heads/main/apis.yml
