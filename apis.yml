@@ -115,50 +115,15 @@ x-coverage:
   - url: https://www.rochester.edu/llms.txt
     status: 404
 apis:
-- aid: university-of-rochester:urresearch-oai-pmh
-  name: UR Research OAI-PMH Interface
-  x-operator: institution
-  description: >-
-    OAI-PMH 2.0 metadata harvesting interface for UR Research, the University of
-    Rochester's legacy institutional repository, served from the university's own domain
-    and running IR+ — repository software written and open-sourced under Apache 2.0 by
-    the River Campus Libraries. Verified live on 2026-08-30: repositoryName "UR Research",
-    earliestDatestamp 2003-07-17T19:40:11Z, three metadata formats (oai_dc, dcterms,
-    marc21), hierarchical collection sets, and spec-correct badVerb error handling. This
-    is one of the few genuinely institution-engineered API surfaces in this cohort.
-  humanURL: https://urresearch.rochester.edu/
-  baseURL: https://urresearch.rochester.edu/oai2
-  tags:
-  - OAI-PMH
-  - Institutional Repository
-  - Metadata
-  - Harvesting
-  - Library
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-rochester-urresearch-oai-pmh-openapi.yml
-  - type: Documentation
-    url: https://urresearch.rochester.edu/
-  - type: x-examples
-    url: examples/university-of-rochester-oai-identify-response.xml
-  - type: x-examples
-    url: examples/university-of-rochester-oai-listmetadataformats-response.xml
-  - type: x-examples
-    url: examples/university-of-rochester-oai-getrecord-response.xml
-  - type: x-conformance
-    url: conformance/university-of-rochester-conformance.yml
-  - type: SourceCode
-    url: https://github.com/rochester-rcl/irplus
 - aid: university-of-rochester:shibboleth-idp
   name: University of Rochester Shibboleth Identity Provider
   x-operator: institution
   description: >-
-    SAML 2.0 / Shibboleth identity provider metadata for the University of Rochester,
-    published machine-readably at its own entityID. The EntityDescriptor carries an
-    IDPSSODescriptor supporting SAML 1.1 and SAML 2.0 with a shibmd:Scope of
-    rochester.edu. Institution-operated by definition — federation identity is not
-    something a university can outsource the assertion of — and the single most reliably
-    machine-readable surface most institutions run.
+    SAML 2.0 / Shibboleth identity provider metadata for the University of Rochester, published machine-readably
+    at its own entityID. The EntityDescriptor carries an IDPSSODescriptor supporting SAML 1.1 and SAML
+    2.0 with a shibmd:Scope of rochester.edu. Institution-operated by definition — federation identity
+    is not something a university can outsource the assertion of — and the single most reliably machine-readable
+    surface most institutions run.
   humanURL: https://tech.rochester.edu/
   baseURL: https://idp.rochester.edu/idp/shibboleth
   tags:
@@ -178,14 +143,13 @@ apis:
   name: University of Rochester Research Repository (URRR) — Figshare tenancy
   x-operator: tenant
   description: >-
-    URRR is the University of Rochester's current research data repository. It is a
-    Figshare tenancy: Rochester's data, Rochester's DOIs, and Rochester's curation, on
-    a platform Figshare operates and whose API contract Figshare wrote. The programmatic
-    surface is the generic Figshare v2 REST API at api.figshare.com — a host shared by
-    fourteen other institutions in this cohort — so the contract is deliberately NOT
-    saved here; it belongs to Figshare's own profile. The tenancy itself is a real
-    institutional fact and is recorded as one. rochester.figshare.com answers HTTP 202
-    with an empty body behind a bot challenge.
+    URRR is the University of Rochester's current research data repository. It is a Figshare tenancy:
+    Rochester's data, Rochester's DOIs, and Rochester's curation, on a platform Figshare operates and
+    whose API contract Figshare wrote. The programmatic surface is the generic Figshare v2 REST API at
+    api.figshare.com — a host shared by fourteen other institutions in this cohort — so the contract is
+    deliberately NOT saved here; it belongs to Figshare's own profile. The tenancy itself is a real institutional
+    fact and is recorded as one. rochester.figshare.com answers HTTP 202 with an empty body behind a bot
+    challenge.
   humanURL: https://rochester.figshare.com/
   baseURL: https://rochester.figshare.com/
   tags:
@@ -204,10 +168,9 @@ apis:
   name: University of Rochester Library Discovery — Ex Libris Primo VE tenancy
   x-operator: tenant
   description: >-
-    River Campus Libraries discovery runs on Ex Libris Primo VE under the
-    institution-specific view identifier 01ROCH_INST:UR01, hosted at
-    rochester.primo.exlibrisgroup.com. The catalogue and its holdings are Rochester's;
-    the discovery platform, its APIs and its contract are Ex Libris/Clarivate's. Recorded
+    River Campus Libraries discovery runs on Ex Libris Primo VE under the institution-specific view identifier
+    01ROCH_INST:UR01, hosted at rochester.primo.exlibrisgroup.com. The catalogue and its holdings are
+    Rochester's; the discovery platform, its APIs and its contract are Ex Libris/Clarivate's. Recorded
     as a tenant relationship — no vendor contract is saved under this institution.
   humanURL: https://www.library.rochester.edu/
   baseURL: https://rochester.primo.exlibrisgroup.com/discovery/search?vid=01ROCH_INST:UR01
@@ -224,6 +187,28 @@ apis:
     url: https://www.library.rochester.edu/
   - type: x-vendor
     url: https://developers.exlibrisgroup.com/
+- aid: university-of-rochester:university-of-rochester-oai-pmh-api
+  name: University of Rochester Oai Pmh API
+  description: OAI-PMH 2.0 metadata harvesting verbs
+  humanURL: https://urresearch.rochester.edu/
+  baseURL: https://urresearch.rochester.edu/oai2
+  tags:
+  - oai-pmh
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-rochester-oai-pmh-api-openapi.yml
+  - type: Documentation
+    url: https://urresearch.rochester.edu/
+  - type: x-examples
+    url: examples/university-of-rochester-oai-identify-response.xml
+  - type: x-examples
+    url: examples/university-of-rochester-oai-listmetadataformats-response.xml
+  - type: x-examples
+    url: examples/university-of-rochester-oai-getrecord-response.xml
+  - type: x-conformance
+    url: conformance/university-of-rochester-conformance.yml
+  - type: SourceCode
+    url: https://github.com/rochester-rcl/irplus
 common:
   - type: License
     name: Apache-2.0
