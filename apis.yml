@@ -130,6 +130,12 @@ apis:
   - Identity Federation
   - SAML
   - Shibboleth
+  - SSO
+  - Metadata
+  tags_raw:
+  - Identity Federation
+  - SAML
+  - Shibboleth
   - Single Sign-On
   - Metadata
   properties:
@@ -156,6 +162,11 @@ apis:
   - Research Repository
   - Research Data
   - Figshare
+  - Tenants
+  tags_raw:
+  - Research Repository
+  - Research Data
+  - Figshare
   - Tenant
   properties:
   - type: Portal
@@ -179,6 +190,12 @@ apis:
   - Library Catalog
   - Discovery
   - Ex Libris
+  - Tenants
+  tags_raw:
+  - Library
+  - Library Catalog
+  - Discovery
+  - Ex Libris
   - Tenant
   properties:
   - type: Portal
@@ -193,6 +210,8 @@ apis:
   humanURL: https://urresearch.rochester.edu/
   baseURL: https://urresearch.rochester.edu/oai2
   tags:
+  - OAI-PMH
+  tags_raw:
   - oai-pmh
   properties:
   - type: OpenAPI
