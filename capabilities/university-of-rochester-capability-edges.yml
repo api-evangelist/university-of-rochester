@@ -1,0 +1,36 @@
+slug: university-of-rochester
+provider: University of Rochester
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Education
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: articles
+  spec_file: university-of-rochester-articles-api-openapi.yml
+  capability_id: BC-4780.40
+  capability_id_l1: BC-4780
+  capability_name: Scholarly Output & Publication Management
+  confidence: 0.78
+  evidence: GET /articles  Public Articles; GET /articles/{article_id}/versions  List article versions;
+    GET /articles/{article_id}/versions/{version_id}/embargo  Public Article Embargo for article version
+  reason: Figshare 'articles' are deposited research outputs (datasets/publications) with versions, files,
+    embargo and confidentiality — stewardship and dissemination of scholarly output in an institutional
+    research repository.
+- tag: collections
+  spec_file: university-of-rochester-collections-api-openapi.yml
+  capability_id: BC-4780.40
+  capability_id_l1: BC-4780
+  capability_name: Scholarly Output & Publication Management
+  confidence: 0.72
+  evidence: GET /collections  Public Collections; GET /collections/{collection_id}/articles  Public Collection
+    Articles; schemas CollectionDOI, CollectionHandle
+  reason: Collections group deposited research outputs with DOIs, handles and versioning in the institutional
+    research repository — scholarly output and publication stewardship.

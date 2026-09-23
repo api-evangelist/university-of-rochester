@@ -1,0 +1,90 @@
+generated: '2026-08-30'
+method: probed
+source: >-
+  Live HTTP probes of University of Rochester institution-operated hosts on
+  2026-08-30, read against the Kin Score `education` regime standards list.
+  Reward-only: only standards with a fetched, inspected response are recorded.
+provider: University of Rochester
+providerId: university-of-rochester
+regime: education
+summary:
+  probed: 12
+  conformant: 3
+  standards_confirmed: [oai-pmh, shibboleth, saml]
+conformance:
+- standard: oai-pmh
+  name: Open Archives Initiative Protocol for Metadata Harvesting 2.0
+  status: conformant
+  x-operator: institution
+  evidence:
+    url: https://urresearch.rochester.edu/oai2?verb=Identify
+    status: 200
+    location: OAI-PMH/Identify/protocolVersion
+    observed: >-
+      protocolVersion 2.0; repositoryName "UR Research"; adminEmail
+      stephen.alexander@rochester.edu; earliestDatestamp 2003-07-17T19:40:11Z;
+      deletedRecord persistent; granularity YYYY-MM-DDThh:mm:ssZ.
+      ListMetadataFormats returns oai_dc, dcterms, marc21. ListSets returns
+      hierarchical collection sets. ListIdentifiers and ListRecords return
+      records under oai:urresearch.rochester.edu:N. verb=BadVerb returns a
+      spec-correct <error code="badVerb"> inside an HTTP 200 envelope.
+    artifact: examples/university-of-rochester-oai-identify-response.xml
+  notes: >-
+    Institution-operated: served from the university's own domain and running
+    IR+, repository software written and open-sourced by the University of
+    Rochester River Campus Libraries.
+- standard: shibboleth
+  name: Shibboleth Identity Provider
+  status: conformant
+  x-operator: institution
+  evidence:
+    url: https://idp.rochester.edu/idp/shibboleth
+    status: 200
+    location: EntityDescriptor/IDPSSODescriptor/Extensions/shibmd:Scope
+    observed: >-
+      Shibboleth IdP metadata published at the entityID itself.
+      protocolSupportEnumeration includes urn:mace:shibboleth:1.0;
+      shibmd:Scope regexp="false" is rochester.edu; signing certificate CN is
+      shib2.its.rochester.edu.
+    artifact: examples/university-of-rochester-shibboleth-idp-metadata.xml
+- standard: saml
+  name: SAML 2.0 Metadata
+  status: conformant
+  x-operator: institution
+  evidence:
+    url: https://idp.rochester.edu/idp/shibboleth
+    status: 200
+    location: EntityDescriptor@entityID
+    observed: >-
+      urn:oasis:names:tc:SAML:2.0:metadata EntityDescriptor with entityID
+      https://idp.rochester.edu/idp/shibboleth; IDPSSODescriptor advertises
+      urn:oasis:names:tc:SAML:1.1:protocol and
+      urn:oasis:names:tc:SAML:2.0:protocol.
+    artifact: examples/university-of-rochester-shibboleth-idp-metadata.xml
+not_found:
+- standard: scim
+  detail: No institution-operated SCIM endpoint found; provisioning is not publicly documented.
+- standard: lti
+  detail: Blackboard is the LMS; no institution-published LTI conformance certification found.
+- standard: oneroster
+  detail: No evidence; OneRoster is a K-12-leaning standard and was not observed.
+- standard: ed-fi
+  detail: No evidence; Ed-Fi is a K-12 standard.
+- standard: caliper
+  detail: No institution-published Caliper Analytics endpoint or certification found.
+- standard: qti
+  detail: No institution-published QTI surface found.
+- standard: orcid
+  detail: >-
+    ORCID integration is present in the Figshare-hosted URRR, but that is a
+    tenant deployment of Figshare's contract, not an institution-operated
+    surface — not credited here.
+- standard: datacite
+  detail: >-
+    DOIs on URRR are minted through the Figshare platform; the DataCite
+    conformance belongs to the vendor's contract, not the institution's.
+- standard: crossref
+  detail: No institution-operated Crossref deposit or query surface found.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

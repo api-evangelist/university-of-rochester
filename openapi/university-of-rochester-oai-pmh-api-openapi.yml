@@ -1,0 +1,96 @@
+openapi: 3.2.0
+info:
+  title: UR Research Interface Oai Pmh API
+  version: '2.0'
+  x-generated: '2026-08-30'
+  x-method: derived
+  x-source: Derived from live probes of https://urresearch.rochester.edu/oai2 on 2026-08-30 (verbs Identify, ListMetadataFormats, ListSets, ListIdentifiers, ListRecords, GetRecord, and a badVerb error case), read against OAI-PMH 2.0. Not published by the University of Rochester; API Evangelist authored this description of their live endpoint.
+  x-operator: institution
+  description: OAI-PMH 2.0 metadata harvesting interface for UR Research, the University of Rochester's institutional repository.
+  contact:
+    name: UR Research Repository Administrator
+    email: stephen.alexander@rochester.edu
+    url: https://urresearch.rochester.edu/
+  license:
+    name: Apache License 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://urresearch.rochester.edu
+  description: UR Research institutional repository (University of Rochester)
+tags:
+- name: oai pmh
+  description: OAI-PMH 2.0 metadata harvesting verbs
+paths:
+  /oai2:
+    get:
+      tags:
+      - oai pmh
+      operationId: oaiPmhRequest
+      summary: OAI-PMH 2.0 request
+      description: Single OAI-PMH 2.0 entry point. The `verb` parameter selects the operation. Protocol-level failures are returned as HTTP 200 with an element in the OAI-PMH envelope, per the specification — status code alone does not indicate success.
+      parameters:
+      - name: verb
+        in: query
+        required: true
+        description: OAI-PMH verb.
+        schema:
+          type: string
+          enum:
+          - Identify
+          - ListMetadataFormats
+          - ListSets
+          - ListIdentifiers
+          - ListRecords
+          - GetRecord
+      - name: metadataPrefix
+        in: query
+        required: false
+        description: Metadata format. Required for ListIdentifiers, ListRecords and GetRecord.
+        schema:
+          type: string
+          enum:
+          - oai_dc
+          - dcterms
+          - marc21
+      - name: identifier
+        in: query
+        required: false
+        description: OAI identifier of a single record, e.g. oai:urresearch.rochester.edu:1. Required for GetRecord.
+        schema:
+          type: string
+          examples:
+          - oai:urresearch.rochester.edu:1
+      - name: set
+        in: query
+        required: false
+        description: Set spec to restrict a selective harvest, e.g. "43" or "38:185".
+        schema:
+          type: string
+      - name: from
+        in: query
+        required: false
+        description: Lower bound of the datestamp range, granularity YYYY-MM-DDThh:mm:ssZ.
+        schema:
+          type: string
+          format: date-time
+      - name: until
+        in: query
+        required: false
+        description: Upper bound of the datestamp range, granularity YYYY-MM-DDThh:mm:ssZ.
+        schema:
+          type: string
+          format: date-time
+      - name: resumptionToken
+        in: query
+        required: false
+        description: Flow-control token returned by an incomplete list response. Exclusive of all other arguments except verb.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OAI-PMH envelope. Carries either the verb's payload element or an <error> element; observed error codes include badVerb.
+          content:
+            text/xml:
+              schema:
+                type: string
+                description: OAI-PMH 2.0 XML envelope, http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd

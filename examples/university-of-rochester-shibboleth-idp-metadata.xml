@@ -1,0 +1,119 @@
+<EntityDescriptor entityID="https://idp.rochester.edu/idp/shibboleth"
+                  xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                  xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">rochester.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIVAM8nPCRk50aihh9jR5hpm0QebIz8MA0GCSqGSIb3DQEB
+BQUAMCIxIDAeBgNVBAMTF3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1MB4XDTEwMDUw
+MzE3Mzk0NloXDTMwMDUwMzE3Mzk0NlowIjEgMB4GA1UEAxMXc2hpYjIuaXRzLnJv
+Y2hlc3Rlci5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSsvAF
+IHstqZI+DowfRTvgPn7cQ2CFWX24RmJCR5X5hYTfI2AMrN9JE+7PY9F2JHPKj/PV
+7uXt3oiN7jDexGtDQojywAsEz86GKTEgHKEGQ8YzwLnI1/6ZDrvykH8aCrgoQm7O
+M8U3suUb6pFo2/ZZ3jmzMbd4k8NJa7QXjtqA0XM1I+3F41dIaC5/s8XIcg7Ahjd/
+nm6sohuGVHJx+HZog1VaTqFuVuR3cWyqQ6dC55XIAMq9NiA3JtU69JKMTB34Ux7b
+KTmgVmsKi3JLapcDF1pzCcQoVuEy0PSbLz+R+02RRbGs3QeJqZbLOSUR9KraW0qD
+rERHsLgJcdbFguAzAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3NoaWIyLml0cy5yb2No
+ZXN0ZXIuZWR1hi5odHRwczovL3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBR8nYpQTgEI/aYKmVXqfgmstZVmpDANBgkqhkiG
+9w0BAQUFAAOCAQEAr6si4Z4y/1kCtAGjUpEB0JooKlMZ0SuKJlFPmXhPZXZSbgXo
+N9MAHMnjlhzjCdde39FAtlYPuryGiP0Rtk8C3T+aZg/Whzp1iY7aDuj0MG5XvRrY
+WClnuYqRa7ImEOP1X/L3/5j67fBOvIuYVKAfE28HJFLgnMscd+BLwFwg4MUP51OJ
+XfUt2z0ezqr2o+rDRnkBZLiizpHQcaIycAEoOsQpjg1tQE7Uc/uk4pah/eHu1f1C
+bkmTAMBCJrx8UG038vZR+ylLz1i+I2UI7AmhvNfuh84TdMZH85Sf5G8mPz+Krwib
+5iANvMct2zX06MsOylywfcDKALrij57mN3ZP+A==
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding"
+                                   Location="https://idp.rochester.edu/idp/profile/SAML1/SOAP/ArtifactResolution" 
+                                   index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                   Location="https://idp.rochester.edu/idp/profile/SAML2/SOAP/ArtifactResolution" 
+                                   index="2"/>
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" 
+                             Location="https://idp.rochester.edu/idp/profile/Shibboleth/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" 
+                             Location="https://idp.rochester.edu/idp/profile/SAML2/POST/SSO" />
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" 
+                             Location="https://idp.rochester.edu/idp/profile/SAML2/POST-SimpleSign/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" 
+                             Location="https://idp.rochester.edu/idp/profile/SAML2/Redirect/SSO" />
+
+	<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rochester.edu/idp/profile/SAML2/Redirect/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rochester.edu/idp/profile/SAML2/POST/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.rochester.edu/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rochester.edu/idp/profile/SAML2/SOAP/SLO"/>
+
+    </IDPSSODescriptor>
+
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">rochester.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIVAM8nPCRk50aihh9jR5hpm0QebIz8MA0GCSqGSIb3DQEB
+BQUAMCIxIDAeBgNVBAMTF3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1MB4XDTEwMDUw
+MzE3Mzk0NloXDTMwMDUwMzE3Mzk0NlowIjEgMB4GA1UEAxMXc2hpYjIuaXRzLnJv
+Y2hlc3Rlci5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSsvAF
+IHstqZI+DowfRTvgPn7cQ2CFWX24RmJCR5X5hYTfI2AMrN9JE+7PY9F2JHPKj/PV
+7uXt3oiN7jDexGtDQojywAsEz86GKTEgHKEGQ8YzwLnI1/6ZDrvykH8aCrgoQm7O
+M8U3suUb6pFo2/ZZ3jmzMbd4k8NJa7QXjtqA0XM1I+3F41dIaC5/s8XIcg7Ahjd/
+nm6sohuGVHJx+HZog1VaTqFuVuR3cWyqQ6dC55XIAMq9NiA3JtU69JKMTB34Ux7b
+KTmgVmsKi3JLapcDF1pzCcQoVuEy0PSbLz+R+02RRbGs3QeJqZbLOSUR9KraW0qD
+rERHsLgJcdbFguAzAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3NoaWIyLml0cy5yb2No
+ZXN0ZXIuZWR1hi5odHRwczovL3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBR8nYpQTgEI/aYKmVXqfgmstZVmpDANBgkqhkiG
+9w0BAQUFAAOCAQEAr6si4Z4y/1kCtAGjUpEB0JooKlMZ0SuKJlFPmXhPZXZSbgXo
+N9MAHMnjlhzjCdde39FAtlYPuryGiP0Rtk8C3T+aZg/Whzp1iY7aDuj0MG5XvRrY
+WClnuYqRa7ImEOP1X/L3/5j67fBOvIuYVKAfE28HJFLgnMscd+BLwFwg4MUP51OJ
+XfUt2z0ezqr2o+rDRnkBZLiizpHQcaIycAEoOsQpjg1tQE7Uc/uk4pah/eHu1f1C
+bkmTAMBCJrx8UG038vZR+ylLz1i+I2UI7AmhvNfuh84TdMZH85Sf5G8mPz+Krwib
+5iANvMct2zX06MsOylywfcDKALrij57mN3ZP+A==
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" 
+                          Location="https://idp.rochester.edu/idp/profile/SAML1/SOAP/AttributeQuery" />
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                          Location="https://idp.rochester.edu/idp/profile/SAML2/SOAP/AttributeQuery" />
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>    

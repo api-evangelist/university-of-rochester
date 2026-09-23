@@ -1,0 +1,23 @@
+generated: '2026-08-30'
+method: probed
+source: >-
+  Verbatim live responses captured on 2026-08-30 from University of Rochester
+  institution-operated endpoints. These are real payloads, not synthesised
+  examples.
+examples:
+- file: university-of-rochester-oai-identify-response.xml
+  method: probed
+  source: https://urresearch.rochester.edu/oai2?verb=Identify
+  status: 200
+- file: university-of-rochester-oai-listmetadataformats-response.xml
+  method: probed
+  source: https://urresearch.rochester.edu/oai2?verb=ListMetadataFormats
+  status: 200
+- file: university-of-rochester-oai-getrecord-response.xml
+  method: probed
+  source: https://urresearch.rochester.edu/oai2?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:urresearch.rochester.edu:1
+  status: 200
+- file: university-of-rochester-shibboleth-idp-metadata.xml
+  method: probed
+  source: https://idp.rochester.edu/idp/shibboleth
+  status: 200

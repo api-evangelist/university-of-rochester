@@ -1,0 +1,10 @@
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-08-30T19:14:40Z</responseDate>
+  <request 
+           
+               verb="Identify"
+           
+           > https://urresearch.rochester.edu/oai2.action</request>
+    <Identify><repositoryName>UR Research</repositoryName><baseURL>http://urresearch.rochester.edu/oai2.action</baseURL><protocolVersion>2.0</protocolVersion><adminEmail>stephen.alexander@rochester.edu</adminEmail><earliestDatestamp>2003-07-17T19:40:11Z</earliestDatestamp><deletedRecord>persistent</deletedRecord><granularity>YYYY-MM-DDThh:mm:ssZ</granularity></Identify></OAI-PMH>
