@@ -1,4 +1,4 @@
-# University of Rochester (university-of-rochester)
+# University of Rochester
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,104 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The University of Rochester is a private research university in Rochester, New York, and an AAU
-member, ranked #236 in the QS World University Rankings 2025. This repository catalogs its public
-API footprint as an APIs.json provider profile, under the API Evangelist **university pipeline** —
-which settles *who operates* each surface before saving any contract, because a university is a
-federation of buyers rather than a producer.
+The University of Rochester is a private research university in Rochester, New York, and an AAU member, ranked #236 in the QS World University Rankings 2025. It operates no central public developer portal and no public API programme, and its programmable footprint is small, decentralised, and concentrated in the libraries. Two surfaces are genuinely institution-operated and were verified live in August 2026: an OAI-PMH 2.0 metadata harvesting interface at urresearch.rochester.edu/oai2 for UR Research, the legacy institutional repository, which runs on IR+ — repository software the River Campus Libraries themselves wrote and released under Apache 2.0 — and a Shibboleth SAML 2.0 identity provider at idp.rochester.edu publishing scoped federation metadata at its own entityID. Everything else the institution appears to publish is a vendor's contract running under its name: the University of Rochester Research Repository (URRR) is a Figshare tenancy at rochester.figshare.com and library discovery is an Ex Libris Primo VE tenancy at rochester.primo.exlibrisgroup.com. Those tenancies are real institutional facts and are recorded as such, but the contracts describing them belong to Figshare and Ex Libris, not to Rochester. Administrative systems — the student information system, HR, finance, and course/registrar data — are gated behind institutional identity and are not publicly documented. The River Campus Libraries maintain an active public GitHub organisation (rochester-rcl, 112 repositories) of digital-library and preservation tooling, which is the clearest evidence of the institution's own engineering output.
 
-- APIs.json: https://raw.githubusercontent.com/api-evangelist/university-of-rochester/refs/heads/main/apis.yml
-- Run with Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=university-of-rochester-api-evangelist&utm_content=repo
+**Areas:** University · Higher Education · Education · United States · New York · Private Research University · Association of American Universities · Research Repository · Institutional Repository · OAI-PMH · Identity Federation · Library
 
-## Type
+## University of Rochester on APIs.io
 
-- university / Private Research University / Index / Consumer / Public
+Everything profiled for University of Rochester is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/university-of-rochester/](https://apis.io/providers/university-of-rochester/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-University, Higher Education, Education, United States, New York, Private Research University,
-Association of American Universities, Research Repository, Institutional Repository, OAI-PMH,
-Identity Federation, Library, Research Computing
+- [University of Rochester Shibboleth Identity Provider](https://apis.io/apis/university-of-rochester/shibboleth-idp/) — SAML 2.0 / Shibboleth identity provider metadata for the University of Rochester, published machine-readably at its own entityID. The EntityDescriptor…
+- [University of Rochester Research Repository (URRR) — Figshare tenancy](https://apis.io/apis/university-of-rochester/urrr-figshare-tenancy/) — URRR is the University of Rochester's current research data repository. It is a Figshare tenancy: Rochester's data, Rochester's DOIs, and Rochester's…
+- [University of Rochester Library Discovery — Ex Libris Primo VE tenancy](https://apis.io/apis/university-of-rochester/primo-discovery-tenancy/) — River Campus Libraries discovery runs on Ex Libris Primo VE under the institution-specific view identifier 01ROCH_INST:UR01, hosted at…
+- [University of Rochester Oai Pmh API](https://apis.io/apis/university-of-rochester/university-of-rochester-oai-pmh-api/) — OAI-PMH 2.0 metadata harvesting verbs
 
-## Surfaces
+### Published properties
 
-Each entry carries an `x-operator` saying who runs the thing it describes.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Institution-operated
+#### Vocabulary (1)
 
-- **UR Research OAI-PMH Interface** (`x-operator: institution`) — OAI-PMH 2.0 harvesting interface
-  for the legacy institutional repository, on the university's own domain, running IR+ — repository
-  software the River Campus Libraries wrote and released under Apache 2.0. Verified live
-  2026-08-30: `repositoryName` "UR Research", `earliestDatestamp` 2003-07-17, formats `oai_dc`,
-  `dcterms`, `marc21`, hierarchical collection sets, spec-correct `badVerb` errors.
-  Endpoint: https://urresearch.rochester.edu/oai2 · Source: https://github.com/rochester-rcl/irplus
-- **Shibboleth Identity Provider** (`x-operator: institution`) — SAML 2.0 federation metadata
-  published at its own entityID, `shibmd:Scope` of `rochester.edu`.
-  Endpoint: https://idp.rochester.edu/idp/shibboleth
+The provider's domain terms, defined.
 
-### Tenant relationships (institution's data, vendor's contract)
+- [University of Rochester Research Repository (URRR) Vocabulary](https://apis.io/vocabularies/university-of-rochester/university-of-rochester-vocabulary/)
 
-- **University of Rochester Research Repository (URRR)** (`x-operator: tenant`) — a Figshare
-  tenancy at https://rochester.figshare.com/. The programmatic surface is the generic Figshare v2
-  API at `api.figshare.com`, shared by fourteen other institutions in this cohort; that contract is
-  Figshare's and is deliberately **not** stored here.
-- **Library discovery** (`x-operator: tenant`) — Ex Libris Primo VE, view `01ROCH_INST:UR01`, at
-  https://rochester.primo.exlibrisgroup.com/. Catalogue is Rochester's; platform and contract are
-  Ex Libris/Clarivate's.
+#### Security (1)
 
-## Conformance (Kin Score `education` regime)
+Authentication, trust centre, and vulnerability disclosure.
 
-Confirmed by live probe: `oai-pmh`, `shibboleth`, `saml`. See
-[conformance/university-of-rochester-conformance.yml](conformance/university-of-rochester-conformance.yml).
+- [University Of Rochester Domain Security](https://apis.io/security/university-of-rochester/university-of-rochester-domain-security/)
 
-## Artifacts
+#### Plans and pricing (1)
 
-- [openapi/](openapi/) — one description, of the UR Research OAI-PMH endpoint, `method: derived`
-  from live probes (API Evangelist authored it; the university does not publish an OpenAPI).
-- [examples/](examples/) — verbatim probed responses, `method: probed`.
-- [conformance/](conformance/) · [plans/](plans/) · [rate-limits/](rate-limits/) ·
-  [finops/](finops/) · [security/](security/)
+Published plans, tiers and prices.
 
-## Corrections applied 2026-08-30
+- [University Of Rochester Plans Pricing](https://apis.io/plans/university-of-rochester/university-of-rochester-plans-pricing/)
 
-This profile was first built on 2026-06-03, before the ownership check existed. Two defects were
-corrected:
+#### Rate limits (1)
 
-1. **Vendor contract misattributed.** Eleven `apis[]` entries and ten OpenAPI documents were
-   recorded as the University of Rochester's. Every one was Figshare's generic contract —
-   `info.title` "Figshare altmetric ...", `info.contact` "Figshare Support", `servers[]`
-   `https://api.figshare.com/v2`, a host claimed by fourteen other institutions in this cohort.
-   The specs and everything derived from them (JSON Schema, JSON Structure, examples, Spectral
-   rules, vocabulary, JSON-LD context, OAuth scopes, authentication, agentic-access, capability
-   edges, Postman/OpenCollection collections) have been removed. The tenancy itself is kept, as a
-   `tenant` entry.
-2. **Dead endpoint recorded as verified.** The catalogued OAI-PMH base URL
-   `https://urresearch.rochester.edu/oai/request` returns HTTP 200 with an "Unknown Action" HTML
-   page — a soft 404 that a status-code-only check reads as live. The working endpoint is `/oai2`.
+Published request limits.
 
-Two surfaces were **added**: the corrected OAI-PMH endpoint and the Shibboleth/SAML identity
-provider, which the June profile had recorded as "did not resolve publicly and appear gated".
+- [University Of Rochester Rate Limits](https://apis.io/rate-limits/university-of-rochester/university-of-rochester-rate-limits/)
 
-**Expect this correction to lower the composite score.** The June figure was substantially
-Figshare's contract quality, not Rochester's.
+#### FinOps (1)
 
-## Notes
+What the API costs to run, by operation.
 
-- No central University of Rochester developer portal exists; `api.rochester.edu` and
-  `data.rochester.edu` do not resolve, and `www.rochester.edu/llms.txt` returns 404.
-- Administrative systems (SIS, HR, finance, registrar/course data) are gated behind institutional
-  identity and are not publicly documented.
-- `rochester.figshare.com` answers HTTP 202 with an empty body behind a bot challenge — live, but
-  not readable by probe.
-- The River Campus Libraries GitHub organisation (`rochester-rcl`, 112 public repositories, active
-  through August 2026) is the clearest evidence of the institution's own engineering output.
-- See [review.yml](review.yml) for per-URL HTTP status verification.
+- [University Of Rochester Finops](https://apis.io/finops/university-of-rochester/university-of-rochester-finops/)
 
-## Timestamps
+## Where to find this API
 
-- Created: 2026-06-03
-- Modified: 2026-08-30
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Maintainers
+- [Website](https://www.rochester.edu/)
+- [Support](https://tech.rochester.edu/)
+- [Blog](https://www.rochester.edu/newscenter/)
+- [Terms of service](https://www.rochester.edu/policies/)
+- [Privacy policy](https://www.rochester.edu/privacy)
 
-- Kin Lane — kin@apievangelist.com
+## API Evangelist rating
+
+**Kin Score 22.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 14.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 26.3 |
+
+**Agent readiness 15.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/university-of-rochester/](https://apis.io/providers/university-of-rochester/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for University of Rochester: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/university-of-rochester/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
